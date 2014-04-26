@@ -1,0 +1,33 @@
+{
+  "name": "IdobataBotNakanohito",
+  "short_name": "IBN",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "中の人などいない！",
+  "icons": {
+    "48":  "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://idobata.io/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://idobata.io/*"],
+      "js": [
+        "js/jquery-2.1.0.min.js",
+        "js/nakanohito.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/jquery-2.1.0.min.js",
+      "js/background.js"
+    ]
+  },
+  "web_accessible_resources": [
+  ]
+}
