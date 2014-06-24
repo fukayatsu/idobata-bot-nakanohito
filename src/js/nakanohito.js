@@ -13,7 +13,7 @@ $(document).on('click', 'a.ibn-message-send', function(){
     return;
   }
 
-  var matches = $('.room.active a').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
+  var matches = $('.room a.active').attr('href').match(/organization\/([^\/]+)\/room\/([^\/]+)/)
   var params = {
     organization_slug: matches[1],
     room_name:         matches[2]
